@@ -1,0 +1,12 @@
+{
+    "recommendations": [
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "charliermarsh.ruff",
+        "tamasfe.even-better-toml",
+        "ms-toolsai.jupyter",
+        "ms-azuretools.vscode-containers",
+        "github.vscode-github-actions",
+        "anthropic.claude-code"
+    ]
+}

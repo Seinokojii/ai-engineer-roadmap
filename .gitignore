@@ -1,0 +1,17 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+
+# secrets
+.env
+.env.*
+!.env.example
+
+# data: small fixtures are committed on purpose, raw dumps and indexes are not
+data/raw/
+data/*.db
+data/*.sqlite
+data/index/
+reports/
