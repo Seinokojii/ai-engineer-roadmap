@@ -9,7 +9,7 @@ def test_normalize_collapses_spaces_and_trims():
 
 
 def test_normalize_unifies_spaces_and_quotes():
-    assert normalize("кофейня «Зерно»") == 'кофейня "Зерно"'
+    assert normalize("кофейня\u00a0«Зерно»") == 'кофейня "Зерно"'
 
 
 def test_normalize_composes_decomposed_letters():
@@ -40,7 +40,7 @@ def test_review_rejects_rating_out_of_range():
 
 def test_review_rejects_blank_text():
     with pytest.raises(ValidationError) as err:
-        Review(text="     ")
+        Review(text="   \u00a0 ")
     assert err.value.errors()[0]["loc"] == ("text",)
 
 

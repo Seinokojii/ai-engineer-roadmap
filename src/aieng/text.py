@@ -16,11 +16,11 @@ log = logging.getLogger(__name__)
 
 # Spaces that look like a space but are different characters.
 _SPACES = {
-    " ": " ",  # no-break space
-    " ": " ",  # narrow no-break space
-    " ": " ",  # thin space
-    "​": "",  # zero-width space
-    "﻿": "",  # byte order mark
+    "\u00a0": " ",  # no-break space
+    "\u202f": " ",  # narrow no-break space
+    "\u2009": " ",  # thin space
+    "\u200b": "",  # zero-width space
+    "\ufeff": "",  # byte order mark
 }
 _QUOTES = {
     "«": '"',
