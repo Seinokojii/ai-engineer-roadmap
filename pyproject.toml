@@ -27,6 +27,10 @@ packages = ["src/aieng"]
 testpaths = ["tests"]
 addopts = "-q"
 
+[tool.pyright]
+venvPath = "."
+venv = ".venv"
+
 [tool.ruff]
 line-length = 100
 target-version = "py312"
