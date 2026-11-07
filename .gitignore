@@ -15,3 +15,6 @@ data/*.db
 data/*.sqlite
 data/index/
 reports/
+
+# local link to the Obsidian day notes (private vault, not part of the repo)
+notes
