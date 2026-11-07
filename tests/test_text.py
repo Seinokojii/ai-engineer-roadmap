@@ -48,3 +48,7 @@ def test_review_rating_is_optional_and_text_is_normalized():
     review = Review(text="  Норм  кофе ")
     assert review.text == "Норм кофе"
     assert review.rating is None
+
+
+def test_normalize_keeps_kyrgyz_letters():
+    assert normalize("Салам  достор, ыңгайлуу!") == "Салам достор, ыңгайлуу!"
