@@ -17,3 +17,11 @@ def test_key_from_env_file(tmp_path, monkeypatch):
     s = load_settings(env_file=env)
     assert s.has("gemini")
     assert s.gemini_api_key == "test-key"
+
+
+def test_local_model_from_env_file(tmp_path, monkeypatch):
+    monkeypatch.delenv("LOCAL_MODEL", raising=False)
+    env = tmp_path / ".env"
+    env.write_text("LOCAL_MODEL=qwen\n", encoding="utf-8")
+    s = load_settings(env_file=env)
+    assert s.local_model == "qwen"
